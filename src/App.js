@@ -4,6 +4,7 @@ import { Home } from './views/home';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Search from './views/search';
+import "../src/App.css"
 function App() {
   return (
     <Router>

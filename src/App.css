@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+.search{
+  font-size: 25px;
+}
+
+.results{
+  height: 600px !important;
+  overflow-y: scroll;
+}
+
+.results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.results::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 8px;
+}
+.results::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

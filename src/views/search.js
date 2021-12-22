@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react'
+import Card from '../components/card';
 
 const Search = () => {
 
@@ -17,9 +18,7 @@ const Search = () => {
                     setResults(response.data.results)}
                 }
                 
-        )
-        .catch(error => console.log(error.response, "error") )
-            
+        )   
     }
 
     const handleChange = event => {
@@ -33,26 +32,30 @@ const Search = () => {
     }
 
     return (
-        <div className='container text-center'>
+        <div className="container text-center">
+            <h1 className="mt-3 display-5" >Find your hero or villain</h1>
         <form onSubmit={handleSearch} >
-            <div className='control'>
+            <div className="form-group col-md-4 m-auto mt-3">
                 <input
                     name="character"
-                    className='input'
-                    type='text'
-                    placeholder='Find a hero'
+                    className="form-control text-center search"
+                    type="text"
+                    placeholder="Look for a character"
                     value={character}
                     onChange={handleChange}
                 />
-            </div>
-            <div className='control'>
-                <button className='button is-link'>Search</button>
+                <button className="btn btn-dark w-100 search">Search</button>
             </div>
         </form>
         {results && 
-           results.map(item => {
-               return <h1 key={item.id}>{item.name}</h1>
-           })
+        
+        <div className="row row-cols-4 row-cols-ms-5 results m-auto mt-4" >
+          { results.map(item => {
+               return  (<Card key={item.id} name={item.name} image={item.image.url} alignment={item.biography.alignment}  />)
+                  
+           })}
+           </div>
+         
         }
        
         
