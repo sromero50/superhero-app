@@ -1,3 +1,7 @@
+
+html,body{
+  height: 100%;
+ }
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://cutewallpaper.org/21/superhero-desktop-background/4-Superhero-HD-Wallpapers-Background-Images-Wallpaper-Abyss.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:center;
+  
+  font-family: 'International Super Hero Light', sans-serif;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+footer{
+  width: 100%;
+    bottom: 0;
+    position: fixed;
 }
